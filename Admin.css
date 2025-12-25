@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-box {
+  max-width: 320px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.login-box input, .login-box button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.login-box button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+.admin {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: #2563eb;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.sidebar h3 {
+  text-align: center;
+  padding: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 14px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background: #1e40af;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+button.danger {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+}
