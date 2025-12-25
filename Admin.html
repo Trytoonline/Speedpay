@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SpeedPay Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox" class="login-box">
+  <h2>SpeedPay Admin</h2>
+  <input type="text" placeholder="Admin ID">
+  <input type="password" placeholder="Password">
+  <button onclick="adminLogin()">Login</button>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel" class="admin hidden">
+
+  <aside class="sidebar">
+    <h3>SpeedPay</h3>
+    <ul>
+      <li onclick="showSection('dashboard')">Dashboard</li>
+      <li onclick="showSection('users')">Users</li>
+      <li onclick="showSection('recharge')">Recharge</li>
+      <li onclick="showSection('transactions')">Transactions</li>
+      <li onclick="showSection('team')">Team</li>
+      <li onclick="showSection('settings')">Settings</li>
+      <li onclick="logout()">Logout</li>
+    </ul>
+  </aside>
+
+  <main class="content">
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section active">
+      <h2>Dashboard</h2>
+      <div class="cards">
+        <div class="card">Total Users<br><b>0</b></div>
+        <div class="card">Total Recharge<br><b>₹0</b></div>
+        <div class="card">Total Profit<br><b>₹0</b></div>
+      </div>
+    </section>
+
+    <!-- USERS -->
+    <section id="users" class="section">
+      <h2>Users</h2>
+      <table>
+        <tr>
+          <th>UID</th>
+          <th>Mobile</th>
+          <th>Balance</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>10001</td>
+          <td>9XXXXXXXXX</td>
+          <td>₹0</td>
+          <td>Active</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- RECHARGE -->
+    <section id="recharge" class="section">
+      <h2>Recharge Requests</h2>
+      <table>
+        <tr>
+          <th>UID</th>
+          <th>Amount</th>
+          <th>Method</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>10001</td>
+          <td>₹500</td>
+          <td>UPI</td>
+          <td>
+            <button>Approve</button>
+            <button class="danger">Reject</button>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- TRANSACTIONS -->
+    <section id="transactions" class="section">
+      <h2>Transactions</h2>
+      <p>No transactions yet</p>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section">
+      <h2>Team & Commission</h2>
+      <p>A-Level: 0</p>
+      <p>B-Level: 0</p>
+      <p>Total Commission: ₹0</p>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings" class="section">
+      <h2>Settings</h2>
+      <label>USDT Rate</label>
+      <input type="number" value="99.96">
+      <label>Reward %</label>
+      <input type="number" value="2">
+      <button>Save</button>
+    </section>
+
+  </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+                                          </html>
