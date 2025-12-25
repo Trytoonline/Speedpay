@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RosePay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- LOGIN PAGE -->
+  <section id="loginPage" class="page active">
+    <h1 class="app-title">RosePay</h1>
+
+    <div class="card">
+      <input type="tel" placeholder="+91 Mobile Number">
+      <div class="password-box">
+        <input type="password" placeholder="Password" id="password">
+        <span class="material-icons" onclick="togglePassword()">visibility</span>
+      </div>
+      <button class="btn-primary" onclick="login()">Login</button>
+    </div>
+  </section>
+
+  <!-- HOME -->
+  <section id="homePage" class="page">
+    <div class="card">
+      <h3>Total Assets</h3>
+      <h2>Balance: ₹0</h2>
+      <p>1 INR = 1 Token</p>
+      <p>1 USDT ≈ 99.96 INR</p>
+      <button class="btn-primary">Recharge</button>
+    </div>
+
+    <div class="grid-2">
+      <div class="card small">
+        <p>Today Received</p>
+        <h3>₹0</h3>
+      </div>
+      <div class="card small">
+        <p>Today Profit</p>
+        <h3>₹0</h3>
+      </div>
+    </div>
+
+    <div class="card banner">
+      <h3>TEAM COMMISSION</h3>
+      <p>Recommend A-Level members and get 0.3% reward</p>
+    </div>
+
+    <div class="card telegram">
+      <p>Join our Telegram Channel</p>
+      <button class="btn-outline">Join Now</button>
+    </div>
+  </section>
+
+  <!-- TRANSACTION -->
+  <section id="transactionPage" class="page">
+    <div class="card">
+      <p>Token Available: 0</p>
+      <p>Month Received: ₹0</p>
+      <p>Month Profit: ₹0</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active">INR</button>
+      <button class="tab">USDT</button>
+    </div>
+
+    <div class="card">
+      <p>Exchange Rate</p>
+      <h3>1 USDT ≈ 99.96 Token</h3>
+      <input type="number" placeholder="Recharge Amount">
+      <button class="btn-primary">Confirm Recharge</button>
+    </div>
+  </section>
+
+  <!-- PAYMENT -->
+  <section id="paymentPage" class="page">
+    <div class="card">
+      <p>Account Status: <strong>Not Added</strong></p>
+      <button class="btn-primary">Add UPI</button>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="teamPage" class="page">
+    <div class="card">
+      <p>Today Commission: ₹0</p>
+      <p>Yesterday: ₹0</p>
+      <p>This Month: ₹0</p>
+    </div>
+
+    <div class="card">
+      <p>Invite Code</p>
+      <div class="invite">
+        <span id="inviteCode">RP123456</span>
+        <button onclick="copyCode()">Copy</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>A-Level Members: 0</p>
+      <p>B-Level Members: 0</p>
+      <p>Total Recharge: ₹0</p>
+    </div>
+  </section>
+
+  <!-- ACCOUNT -->
+  <section id="accountPage" class="page">
+    <div class="card">
+      <p>UID: 10001234</p>
+      <p>Reward Ratio: 2%</p>
+    </div>
+
+    <ul class="menu">
+      <li>Order</li>
+      <li>Recharge</li>
+      <li>Token</li>
+      <li>Task</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+
+    <button class="btn-danger" onclick="logout()">Sign Out</button>
+  </section>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button onclick="showPage('homePage')"><span class="material-icons">home</span></button>
+  <button onclick="showPage('transactionPage')"><span class="material-icons">receipt_long</span></button>
+  <button onclick="showPage('paymentPage')"><span class="material-icons">payments</span></button>
+  <button onclick="showPage('teamPage')"><span class="material-icons">groups</span></button>
+  <button onclick="showPage('accountPage')"><span class="material-icons">person</span></button>
+</nav>
+
+<script src="app.js"></script>
+</body>
+                        </html>
